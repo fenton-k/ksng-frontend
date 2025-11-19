@@ -98,19 +98,6 @@ const FundingChart = ({ project }) => {
       Math.max(((now - launchTime) / totalProjectDuration) * 100, 0),
       100
     );
-    enhancedData.push({
-      timestamp: now,
-      timelineProgress: currentProgress,
-      pledged: currentPledged,
-      backersCount: latestFunding?.backersCount || 0,
-      percentFunded: currentPercentFunded,
-      date: "Now",
-      time: "",
-      daysFromLaunch: Math.floor((now - launchTime) / (1000 * 60 * 60 * 24)),
-      daysTotal: Math.floor(totalProjectDuration / (1000 * 60 * 60 * 24)),
-      isMilestone: true,
-      milestone: "Current",
-    });
   }
 
   // Custom tooltip

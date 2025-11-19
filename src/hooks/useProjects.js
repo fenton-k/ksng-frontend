@@ -8,7 +8,9 @@ export function useProjects() {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch("/data/projects.json");
+        const response = await fetch(
+          "https://raw.githubusercontent.com/fenton-k/kick-scraper-ng/refs/heads/main/active_projects.json"
+        );
         if (!response.ok) {
           throw new Error("Failed to load projects data");
         }
